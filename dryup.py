@@ -10,13 +10,12 @@ class Menubar:
         parent.master.config(menu=menubar)
 
         file_dropdown = tk.Menu(menubar, font=font_specs, tearoff=0)
-        file_dropdown.add_command(label="New File")
-        file_dropdown.add_command(label="Open File")
+        file_dropdown.add_command(label="New File", command=parent.new_file)
+        file_dropdown.add_command(label="Open File", command=parent.open_file)
+        file_dropdown.add_command(label="Save File", command=parent.save_file)
+        file_dropdown.add_command(label="Save As", command=parent.save_as)
         file_dropdown.add_separator()
-        file_dropdown.add_command(label="Save File")
-        file_dropdown.add_command(label="Save As")
-        file_dropdown.add_separator()
-        file_dropdown.add_command(label="Exit")
+        file_dropdown.add_command(label="Exit", command=parent.master.destroy)
 
         menubar.add_cascade(label="File", menu=file_dropdown)
 
@@ -38,6 +37,23 @@ class DryUp:
         self.scroll.pack(side=tk.RIGHT, fill=tk.Y)
 
         self.menubar = Menubar(self)
+
+    def set_window_title(self):
+        pass
+
+    def new_file(self):
+        pass
+
+    def open_file(self):
+        pass
+
+    def save_file(self):
+        pass
+
+    def save_as(self):
+        pass
+
+
 
 
 
