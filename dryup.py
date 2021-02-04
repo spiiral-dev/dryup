@@ -34,6 +34,14 @@ class Menubar:
         menubar.add_cascade(label="Help", menu=about)
 
 
+class Statusbar:
+
+    def __init__(self, parent):
+
+        self.status = tk.StringVar()
+        self.status.set("DryUp - 1.0.2 Ruload")
+
+
 class DryUp:
 
     def __init__(self, master):
@@ -52,6 +60,7 @@ class DryUp:
         self.scroll.pack(side=tk.RIGHT, fill=tk.Y)
 
         self.menubar = Menubar(self)
+        self.statusbar = Statusbar(self)
 
     def set_window_title(self, name=None):
         if name:
@@ -83,11 +92,13 @@ class DryUp:
     def save_file(self):
         if self.filename:
             try:
-                pass
+                textarea_content = self.textarea.get(1.0, tk.END)
+                with open(self.filename, "w") as f:
+                    f.write(textarea_content)
             except Exception as e:
-                print(e)
+                messagebox.showerror(e)
         else:
-            self.save_as
+            self.save_as()
 
     def save_as(self):
         try:
