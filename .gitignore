@@ -1,2 +1,9 @@
 script.iss
 Untitled.txt
+test.txt
+.gitignore
+__pycache__/
+.idea/
+dist/
+Output/
+.gitignore
