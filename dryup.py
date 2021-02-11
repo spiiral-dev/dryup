@@ -88,11 +88,11 @@ class DryUp:
             defaultextension=".txt",
             filetypes=[("All Files", "*.*"), 
                        ("Text Files", "*.txt"),
-                       ("Python Scripts", "*.py"),
-                       ("Markdown Documents", "*.md"),
-                       ("JavaScript Files", "*.js"),
-                       ("HTML Files", "*.html"),
-                       ("CSS Files", "*.css")])
+                    #    ("Python Scripts", "*.py"),
+                    #    ("Markdown Documents", "*.md"),
+                    #    ("JavaScript Files", "*.js"),
+                    #    ("HTML Files", "*.html"),
+                    ])
         if self.filename:
             self.textarea.delete(1.0, tk.END)
             with open(self.filename, "r") as f:
