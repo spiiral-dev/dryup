@@ -13,3 +13,6 @@ or
 
 ### Is It Free?
 Yes! I may look into setting up a donation system, but at the moment I make nothing from this or any of my projects.
+
+### Can I Contribute?
+Yes! Just clone, edit and make a pull request and we'll review it!
