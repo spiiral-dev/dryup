@@ -1,1 +1,1 @@
-please goto > https://girgub.com/spiiralol/dryup
+please goto > https://github.com/spiiralol/dryup
